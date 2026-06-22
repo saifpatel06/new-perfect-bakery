@@ -15,11 +15,11 @@ export default function InquiryForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/918485059365?text=${encodeURIComponent(
       `Name: ${formData.name}
       Phone: ${formData.phone}
       Occasion: ${formData.occasion}
-      Message: ${formData.message}`
+      Message: ${formData.message}`,
     )}`;
 
     window.open(whatsappUrl, "_blank");
@@ -35,8 +35,7 @@ export default function InquiryForm() {
         <h3>Inquiry Received!</h3>
 
         <p>
-          We'll call you back within a few hours
-          to discuss your requirement.
+          We'll call you back within a few hours to discuss your requirement.
         </p>
       </div>
     );
@@ -44,21 +43,16 @@ export default function InquiryForm() {
 
   return (
     <>
-      <h3 className={styles.title}>
-        Send an Inquiry
-      </h3>
+      <h3 className={styles.title}>Send an Inquiry</h3>
 
-      <form
-        onSubmit={handleSubmit}
-        className={styles.form}
-      >
+      <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.row}>
           <div className={styles.field}>
             <label>YOUR NAME</label>
 
             <input
               type="text"
-              placeholder="Rahul Patil"
+              placeholder="Irfan Ansari"
               required
               value={formData.name}
               onChange={(e) =>
@@ -75,7 +69,7 @@ export default function InquiryForm() {
 
             <input
               type="tel"
-              placeholder="+91 98765 43210"
+              placeholder="+91 84850 59365"
               required
               value={formData.phone}
               onChange={(e) =>
@@ -125,10 +119,7 @@ export default function InquiryForm() {
           />
         </div>
 
-        <button
-          type="submit"
-          className={styles.submitBtn}
-        >
+        <button type="submit" className={styles.submitBtn}>
           <Send size={14} />
           Submit Inquiry
         </button>

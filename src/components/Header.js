@@ -37,9 +37,7 @@ export default function Header() {
 
   return (
     <header
-      className={`${styles.header} ${
-        scrolled ? styles.headerScrolled : ""
-      }`}
+      className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}
     >
       <div className={styles.container}>
         {/* Logo */}
@@ -77,7 +75,7 @@ export default function Header() {
 
         {/* Right Side */}
         <div className={styles.rightSection}>
-          <a href="tel:+919876543210" className={styles.callBtn}>
+          <a href="tel:+918485059365" className={styles.callBtn}>
             <Phone size={14} />
             Call Now
           </a>
@@ -106,7 +104,7 @@ export default function Header() {
               </button>
             ))}
 
-            <a href="tel:+919876543210" className={styles.mobileCallBtn}>
+            <a href="tel:+918485059365" className={styles.mobileCallBtn}>
               <Phone size={14} />
               Call Now
             </a>

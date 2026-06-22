@@ -71,10 +71,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className={styles.ctaWrapper}>
-            <a
-              href="tel:+919876543210"
-              className={styles.primaryButton}
-            >
+            <a href="tel:+918485059365" className={styles.primaryButton}>
               <Phone size={16} />
               Click to Call
             </a>

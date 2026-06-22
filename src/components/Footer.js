@@ -32,27 +32,21 @@ export default function Footer() {
             />
 
             <p className={styles.description}>
-              Your neighbourhood bakery, snack counter,
-              and mini-mart — all in one place on
-              60-Feet Road, Pimple Gurav.
-              Serving Pune since day one.
+              Your neighbourhood bakery, snack counter, and mini-mart — all in
+              one place on 60-Feet Road, Pimple Gurav. Serving Pune since day
+              one.
             </p>
 
-            <a
-              href="tel:+919876543210"
-              className={styles.phoneBtn}
-            >
+            <a href="tel:+918485059365" className={styles.phoneBtn}>
               <Phone size={14} />
-              +91 98765 43210
+              +91 84850 59365
             </a>
           </div>
 
           {/* Hours */}
 
           <div>
-            <h4 className={styles.title}>
-              Opening Hours
-            </h4>
+            <h4 className={styles.title}>Opening Hours</h4>
 
             <ul className={styles.hours}>
               <li>
@@ -75,18 +69,14 @@ export default function Footer() {
           {/* Location */}
 
           <div>
-            <h4 className={styles.title}>
-              Find Us
-            </h4>
+            <h4 className={styles.title}>Find Us</h4>
 
             <a
-              href="https://maps.google.com/?q=New+Perfect+Bakery+Pimple+Gurav+Pune"
+              href="https://maps.app.goo.gl/YD1Md1Zkf66wL2di7"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.location}
             >
-              <MapPin size={15} />
-
               <span>
                 New Perfect Bakery,
                 <br />
@@ -99,7 +89,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://maps.google.com/?q=New+Perfect+Bakery+Pimple+Gurav+Pune"
+              href="https://maps.app.goo.gl/YD1Md1Zkf66wL2di7"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.mapLink}
@@ -109,18 +99,12 @@ export default function Footer() {
             </a>
 
             <div className={styles.navWrap}>
-              <h4 className={styles.navTitle}>
-                Navigate
-              </h4>
+              <h4 className={styles.navTitle}>Navigate</h4>
 
               <ul className={styles.navList}>
                 {navLinks.map((item) => (
                   <li key={item.label}>
-                    <button
-                      onClick={() =>
-                        scrollToSection(item.href)
-                      }
-                    >
+                    <button onClick={() => scrollToSection(item.href)}>
                       {item.label}
                     </button>
                   </li>
@@ -134,16 +118,11 @@ export default function Footer() {
 
         <div className={styles.bottomBar}>
           <p>
-            © {new Date().getFullYear()} New Perfect Bakery, 
-            Pimple Gurav, Pune. 
+            © {new Date().getFullYear()} New Perfect Bakery, Pimple Gurav, Pune.
             All rights reserved.
           </p>
 
-          <p>
-            Open 7 AM – 11 PM ·
-            Every Day ·
-            60-Feet Road
-          </p>
+          <p>Open 7 AM – 11 PM · Every Day · 60-Feet Road</p>
         </div>
       </div>
     </footer>
