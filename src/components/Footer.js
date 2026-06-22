@@ -50,19 +50,24 @@ export default function Footer() {
 
             <ul className={styles.hours}>
               <li>
-                <span>Monday – Sunday</span>
-                <strong>7:00 AM – 11:00 PM</strong>
+                <span>Monday - Sunday</span>
+                <strong>7:00 AM - 11:00 PM</strong>
               </li>
 
               <li>
                 <span>Public Holidays</span>
-                <strong>8:00 AM – 10:00 PM</strong>
+                <strong>8:00 AM - 10:00 PM</strong>
               </li>
             </ul>
 
             <div className={styles.openNow}>
               <span className={styles.dot}></span>
-              Open Now
+
+              {new Date().getHours() >= 7 && new Date().getHours() < 22 ? (
+                <span>Open Now</span>
+              ) : (
+                <span>Closed Now</span>
+              )}
             </div>
           </div>
 

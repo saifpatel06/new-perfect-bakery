@@ -12,7 +12,7 @@ import Footer from "../src/components/Footer";
 export default function Home() {
   return (
     <>
-    <Head>
+      <Head>
         <title>
           New Perfect Bakery | Cakes, Snacks & Daily Essentials in Pimple Gurav
         </title>
@@ -27,20 +27,32 @@ export default function Home() {
           content="Bakery in Pimple Gurav, Cake Shop Pune, Fresh Bakery Pune, Samosa Shop Pune, New Perfect Bakery"
         />
 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta name="robots" content="index, follow" />
+
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1"
+          property="og:title"
+          content="New Perfect Bakery | Cakes, Snacks & Daily Essentials in Pimple Gurav"
         />
 
         <meta
-          name="robots"
-          content="index, follow"
+          property="og:description"
+          content="New Perfect Bakery in Pimple Gurav, Pune. Fresh cakes, breads, samosas, snacks, dairy products and daily essentials. Open 7 AM to 11 PM."
         />
 
-        <link
-          rel="canonical"
-          href="https://new-perfect-bakery.vercel.app/"
+        <meta property="og:image" content="/image.png" />
+
+        <meta
+          property="og:url"
+          content="https://new-perfect-bakery.vercel.app/"
         />
+
+        {/* favicon */}
+
+        <link rel="icon" type="image/x-icon" href="./old.png" />
+
+        <link rel="canonical" href="https://new-perfect-bakery.vercel.app/" />
       </Head>
       <Header />
       <Hero />

@@ -54,7 +54,11 @@ export default function Hero() {
           {/* Hours Badge */}
           <div className={styles.hoursBadge}>
             <Clock size={14} />
-            Open Today: 7:00 AM – 11:00 PM
+            {new Date().getHours() >= 7 && new Date().getHours() < 22 ? (
+              <span>Open Now</span>
+            ) : (
+              <span>Closed Now</span>
+            )}
           </div>
 
           {/* Heading */}
