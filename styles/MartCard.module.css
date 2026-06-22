@@ -1,0 +1,83 @@
+.card {
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #ece3d5;
+  background: #fff;
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(28, 15, 10, 0.08);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(28, 15, 10, 0.75) 0%,
+    rgba(28, 15, 10, 0.1) 60%,
+    transparent 100%
+  );
+}
+
+.emoji {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+
+  font-size: 34px;
+}
+
+.content {
+  padding: 22px;
+}
+
+.content h3 {
+  font-family: "Playfair Display", serif;
+  color: #1c0f0a;
+
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #7a6555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.brandList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brand {
+  padding: 6px 12px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(139, 32, 32, 0.2);
+
+  color: #8b2020;
+  font-size: 12px;
+  font-weight: 500;
+}

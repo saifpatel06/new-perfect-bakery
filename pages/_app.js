@@ -1,5 +1,11 @@
 import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }) {
+import "@fontsource/playfair-display";
+import "@fontsource/plus-jakarta-sans";
+
+export default function App({
+  Component,
+  pageProps,
+}) {
   return <Component {...pageProps} />;
 }

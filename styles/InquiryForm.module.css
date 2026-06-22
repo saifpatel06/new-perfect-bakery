@@ -1,0 +1,166 @@
+.title {
+  font-family: "Playfair Display", serif;
+  color: #fffdf7;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 253, 247, 0.6);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 253, 247, 0.18);
+
+  background: rgba(255, 253, 247, 0.1);
+
+  color: #fffdf7;
+  font-size: 14px;
+
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(255, 253, 247, 0.45);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: rgba(245, 212, 154, 0.7);
+  box-shadow: 0 0 0 3px rgba(245, 212, 154, 0.12);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.field select {
+  cursor: pointer;
+}
+
+.field select option {
+  background: #8b2020;
+  color: #fffdf7;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #f5d49a;
+  color: #1c0f0a;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submitBtn:active {
+  transform: scale(0.98);
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  min-height: 350px;
+  padding: 40px 20px;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(245, 212, 154, 0.2);
+
+  color: #f5d49a;
+  font-size: 24px;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.success h3 {
+  font-family: "Playfair Display", serif;
+  color: #fffdf7;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.success p {
+  color: rgba(255, 253, 247, 0.7);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .success {
+    min-height: auto;
+    padding: 30px 10px;
+  }
+}

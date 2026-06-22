@@ -1,0 +1,224 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(28, 15, 10, 0.82) 0%,
+    rgba(139, 32, 32, 0.55) 50%,
+    rgba(201, 123, 46, 0.3) 100%
+  );
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+}
+
+.content {
+  max-width: 700px;
+}
+
+.hoursBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-bottom: 24px;
+
+  border-radius: 999px;
+
+  background: rgba(201, 123, 46, 0.22);
+  border: 1px solid rgba(201, 123, 46, 0.4);
+
+  color: #f5d49a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.heading {
+  color: #fffdf7;
+  font-size: 72px;
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  font-family: "Playfair Display", serif;
+}
+
+.heading em {
+  color: #f5d49a;
+  font-style: italic;
+}
+
+.description {
+  max-width: 550px;
+  color: rgba(255, 253, 247, 0.8);
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  margin-bottom: 40px;
+}
+
+.ctaWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  background: #8b2020;
+  color: #fffdf7;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.primaryButton:hover {
+  opacity: 0.9;
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+  cursor: pointer;
+
+  background: rgba(255, 253, 247, 0.15);
+  border: 1px solid rgba(255, 253, 247, 0.35);
+
+  color: #fffdf7;
+  backdrop-filter: blur(8px);
+
+  transition: 0.3s;
+}
+
+.quickLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quickLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  background: rgba(255, 253, 247, 0.1);
+  border: 1px solid rgba(255, 253, 247, 0.2);
+
+  color: rgba(255, 253, 247, 0.9);
+
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+
+  transition: 0.3s;
+}
+
+.quickLink:hover {
+  opacity: 0.9;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 48px;
+  background: rgba(245, 212, 154, 0.5);
+
+  animation: pulseLine 1.8s infinite;
+}
+
+@keyframes pulseLine {
+  0% {
+    opacity: 0.3;
+    transform: scaleY(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.7);
+  }
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 110px 20px 60px;
+  }
+
+  .heading {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 34px;
+  }
+
+  .ctaWrapper {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    justify-content: center;
+    width: 100%;
+  }
+}
