@@ -1,11 +1,11 @@
 .footer {
-  background: #1c0f0a;
-  padding-top: 64px;
-  padding-bottom: 32px;
+  background: #1a0d08;
+  padding-top: 56px;
+  padding-bottom: 28px;
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -13,20 +13,23 @@
 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 48px;
+  gap: 48px;
+  margin-bottom: 44px;
 }
 
 .logo {
+  width: 140px;
   height: auto;
   filter: brightness(0) invert(1);
 }
 
 .description {
-  margin-top: 20px;
+  margin-top: 18px;
   max-width: 320px;
 
   color: rgba(255, 253, 247, 0.55);
+
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -35,8 +38,8 @@
   align-items: center;
   gap: 8px;
 
-  margin-top: 24px;
-  padding: 12px 20px;
+  margin-top: 22px;
+  padding: 11px 18px;
 
   border-radius: 999px;
 
@@ -45,13 +48,23 @@
 
   text-decoration: none;
   font-weight: 600;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.phoneBtn:hover {
+  transform: translateY(-2px);
 }
 
 .title {
   color: #c97b2e;
+
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
 
   margin-bottom: 18px;
 }
@@ -67,15 +80,18 @@
 
 .hours span {
   display: block;
+
   font-size: 12px;
-  color: rgba(255, 253, 247, 0.45);
+
+  color: rgba(255, 253, 247, 0.42);
 }
 
 .hours strong {
   display: block;
   margin-top: 4px;
 
-  color: rgba(255, 253, 247, 0.85);
+  color: rgba(255, 253, 247, 0.88);
+
   font-size: 14px;
 }
 
@@ -84,13 +100,16 @@
   align-items: center;
   gap: 8px;
 
-  margin-top: 20px;
+  margin-top: 18px;
 
   padding: 8px 14px;
+
   border-radius: 999px;
 
-  background: rgba(201, 123, 46, 0.18);
+  background: rgba(201, 123, 46, 0.16);
+
   color: #f5d49a;
+
   font-size: 12px;
 }
 
@@ -99,6 +118,7 @@
   height: 8px;
 
   border-radius: 50%;
+
   background: #4ade80;
 }
 
@@ -107,13 +127,21 @@
   gap: 10px;
 
   text-decoration: none;
+
   line-height: 1.8;
 
   color: rgba(255, 253, 247, 0.75);
+
+  transition: opacity 0.3s ease;
+}
+
+.location:hover {
+  opacity: 0.8;
 }
 
 .location svg {
   color: #c97b2e;
+
   flex-shrink: 0;
   margin-top: 4px;
 }
@@ -128,19 +156,30 @@
   text-decoration: none;
 
   color: #c97b2e;
+
   font-size: 12px;
   font-weight: 600;
+
+  transition: opacity 0.3s ease;
+}
+
+.mapLink:hover {
+  opacity: 0.8;
 }
 
 .navWrap {
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .navTitle {
   color: rgba(255, 253, 247, 0.35);
+
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 12px;
+
+  font-size: 11px;
+  font-weight: 700;
+
   margin-bottom: 12px;
 }
 
@@ -159,28 +198,54 @@
   cursor: pointer;
 
   color: rgba(255, 253, 247, 0.65);
-  padding: 0;
+
+  font-size: 14px;
+
+  transition: opacity 0.3s ease;
+}
+
+.navList button:hover {
+  opacity: 0.7;
 }
 
 .bottomBar {
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 
-  padding-top: 24px;
+  padding-top: 22px;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   gap: 16px;
 
-  color: rgba(255, 253, 247, 0.3);
+  color: rgba(255, 253, 247, 0.32);
+
   font-size: 12px;
 }
 
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 36px;
   }
 
   .bottomBar {
     flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 48px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: 120px;
   }
 }
